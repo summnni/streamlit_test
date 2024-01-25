@@ -54,7 +54,7 @@ user_query = st.text_input("질문을 입력해주세요.", "")
 
 # 질문 처리 및 응답
 if user_query:
-    llm = ChatOpenAI(temperature=0, openai_api_key="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")
+    llm = ChatOpenAI(temperature=0, openai_api_key="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")
     retriever_from_llm = MultiQueryRetriever.from_llm(
         retriever=db.as_retriever(), llm=llm
     )
