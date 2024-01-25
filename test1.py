@@ -15,8 +15,8 @@ st.title("PDF 기반 챗봇")
 
 # PDF 파일 경로 리스트 정의
 pdf_files = [
-    "C:\Users\USER\Downloads\chatbot\미리보는 CES 2024 All Together, All On_vf.pdf",
-    "C:\Users\USER\Downloads\chatbot\CES 2024로 본 미래 산업 트렌드.pdf",
+    "C:\Users\\USER\\Downloads\\chatbot\\미리보는 CES 2024 All Together, All On_vf.pdf",
+    "C:\\Users\\USER\\Downloads\\chatbot\\CES 2024로 본 미래 산업 트렌드.pdf",
     # 추가적인 파일 경로들...
 ]
 
