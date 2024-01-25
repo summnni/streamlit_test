@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain.document_loaders import PyPDFLoader
+from langchain.document_loaders import PyPDFLoaderpip
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -23,7 +23,7 @@ pdf_files = [
 @st.cache
 def load_and_process_documents(pdf_files):
     all_pages = []
-    for pdf_file in pdf_files:
+    for pdf_file in pdf_fisles:
         loader = PyPDFLoader(pdf_file)
         pages = loader.load_and_split()
         all_pages.extend(pages)
@@ -52,9 +52,12 @@ db = build_vector_db(docs)
 # 사용자 질문 입력
 user_query = st.text_input("질문을 입력해주세요.", "")
 
+# OpenAI API 키 환경변수에서 불러오기
+openai_api_key = os.getenv("OPENAI_API_KEY")
+
 # 질문 처리 및 응답
-if user_query:
-    llm = ChatOpenAI(temperature=0, openai_api_key="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")
+if user_query and openai_api_key:
+    llm = ChatOpenAI(temperature=0, openai_api_key=openai_api_key)
     retriever_from_llm = MultiQueryRetriever.from_llm(
         retriever=db.as_retriever(), llm=llm
     )
