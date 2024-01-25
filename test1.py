@@ -23,7 +23,7 @@ pdf_files = [
 @st.cache
 def load_and_process_documents(pdf_files):
     all_pages = []
-    for pdf_file in pdf_fisles:
+    for pdf_file in pdf_files:
         loader = PyPDFLoader(pdf_file)
         pages = loader.load_and_split()
         all_pages.extend(pages)
