@@ -22,9 +22,9 @@ from langchain.memory import StreamlitChatMessageHistory
 def main():
     st.set_page_config(
     page_title="LS_Chat",
-    page_icon=":books:")
+    page_icon=":brain:")
 
-    st.title("_LS_Data :blue[QA Chat]_ :books:")
+    st.title("_LS_Data :blue[QA Chat]_ :brain:")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
