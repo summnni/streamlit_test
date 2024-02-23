@@ -24,7 +24,7 @@ def main():
     page_title="LS_Chat",
     page_icon=":brain:")
 
-    st.title("_LS_Data :blue[Chat]_ :brain:")
+    st.title("_LS_Data 문서 요약 :blue[Chat]_ :brain:")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
