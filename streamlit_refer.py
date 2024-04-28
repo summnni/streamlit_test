@@ -24,7 +24,7 @@ def main():
     page_title="DirChat",
     page_icon=":books:")
 
-    st.title("_Paper Summarization App :Blue[ChatBot]_ :owl:")
+    st.title("_Summarization App :Blue[ChatBot]_ :owl:")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
